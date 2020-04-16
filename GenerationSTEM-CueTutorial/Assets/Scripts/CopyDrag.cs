@@ -14,3 +14,5 @@ public class CopyDrag : MonoBehaviour
 }
 
 //new Vector3(hit.point.x, hit.point.y, hit.point.z)
+// try to only create the mouse down once and not the created copies
+// do drag option now
