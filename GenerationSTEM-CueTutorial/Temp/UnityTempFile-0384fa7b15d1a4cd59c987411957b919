@@ -297,6 +297,7 @@
 "Assets/Scripts/Back_OnMouse.cs"
 "Assets/Scripts/ButtonLoader.cs"
 "Assets/Scripts/Control_OnMouse.cs"
-"Assets/Scripts/CopyDrag.cs"
+"Assets/Scripts/CreateNewBlock.cs"
+"Assets/Scripts/Drag.cs"
 "Assets/Scripts/OnMouse.cs"
 "Assets/Scripts/SceneLoader.cs"

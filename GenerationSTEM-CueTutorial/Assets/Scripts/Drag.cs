@@ -2,20 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CopyDrag : MonoBehaviour
+public class Drag : MonoBehaviour
 {
     private bool isDragging;
-    public GameObject prefab;
-    int click_counter = 0;
+    //int click_counter = 0;
 
     void OnMouseDown()
     {
-        if (click_counter == 0)
-        {
-            GameObject obj = Instantiate(prefab, new Vector3(-1.5f, transform.position.y, transform.position.z), Quaternion.identity) as GameObject;
-            isDragging = true;
-            click_counter = +1;
-        }
+        isDragging = true;
     }
 
     public void OnMouseUp()
