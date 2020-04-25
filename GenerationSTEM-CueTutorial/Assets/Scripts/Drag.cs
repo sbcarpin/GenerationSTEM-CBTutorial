@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Drag : MonoBehaviour
 
     void Update()
     {
-        if (isDragging)
+        if (!EventSystem.current.IsPointerOverGameObject() & isDragging)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
