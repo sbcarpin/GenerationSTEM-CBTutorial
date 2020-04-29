@@ -2727,6 +2727,7 @@ GameObject:
   - component: {fileID: 1827714332}
   - component: {fileID: 1827714334}
   - component: {fileID: 1827714335}
+  - component: {fileID: 1827714336}
   m_Layer: 0
   m_Name: Move_Speed
   m_TagString: BlockCode
@@ -2835,6 +2836,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.8440886, y: 0.7926153}
   m_EdgeRadius: 0
+--- !u!114 &1827714336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827714331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cfc33bfec4741de847ea0c5a551963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bike: {fileID: 1372713381}
+  distance: -10
+  speed: 5
 --- !u!1 &1906990917
 GameObject:
   m_ObjectHideFlags: 0
