@@ -7,6 +7,7 @@ public class PlayStopButtonAction : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     public GameObject bike;
+    float rotationResetSpeed = 1.0f;
 
     void Start()
     {
@@ -27,7 +28,9 @@ public class PlayStopButtonAction : MonoBehaviour
 
         /* RESET the position of the bike */
         bike.transform.position = originalPosition;
-        bike.transform.rotation = originalRotation;
+        //bike.transform.rotation = originalRotation;
+
+        transform.rotation = Quaternion.Slerp(bike.transform.rotation, originalRotation, Time.time * rotationResetSpeed);
 
         /*if (rigidbody != null)
         {
