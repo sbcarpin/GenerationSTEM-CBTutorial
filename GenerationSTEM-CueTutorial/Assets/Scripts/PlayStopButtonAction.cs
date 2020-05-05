@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class PlayStopButtonAction : MonoBehaviour
 {
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    public GameObject bike;
+
+    void Start()
+    {
+        originalPosition = bike.transform.position;
+        originalRotation = bike.transform.rotation;
+    }
+
     public void PlayBlockCode()
     {
         //will run the block code for the play button
@@ -14,5 +24,15 @@ public class PlayStopButtonAction : MonoBehaviour
     {
         //will run the block code for the stop button
         Debug.Log("Stop Button Clicked");
+
+        /* RESET the position of the bike */
+        bike.transform.position = originalPosition;
+        bike.transform.rotation = originalRotation;
+
+        /*if (rigidbody != null)
+        {
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+        }*/
     }
 }

@@ -1094,6 +1094,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1827714336}
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &560385531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,6 +1839,7 @@ GameObject:
   - component: {fileID: 955458914}
   - component: {fileID: 955458916}
   - component: {fileID: 955458915}
+  - component: {fileID: 955458917}
   m_Layer: 0
   m_Name: WaitButton
   m_TagString: BlockCode
@@ -1936,6 +1948,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4f33365af834035bf2b1661c2ad5aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &955458917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955458912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a3ea6632e754bb6bc8e946ae555662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputTime: 0
+  bike: {fileID: 1372713381}
 --- !u!1 &1275200224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,8 +2355,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333532408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.16, y: 2.34, z: 0}
-  m_LocalScale: {x: 1.0814041, y: 1, z: 1}
+  m_LocalPosition: {x: -8.1726, y: 2.34, z: 0}
+  m_LocalScale: {x: 1.103564, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -2374,6 +2400,7 @@ GameObject:
   - component: {fileID: 1354187409}
   - component: {fileID: 1354187410}
   - component: {fileID: 1354187411}
+  - component: {fileID: 1354187412}
   m_Layer: 0
   m_Name: turnButton
   m_TagString: BlockCode
@@ -2482,6 +2509,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7370133, y: 0.8505293}
   m_EdgeRadius: 0
+--- !u!114 &1354187412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354187407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb3d648b2af84b69ba95ddf53942030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bike: {fileID: 1372713381}
+  rotationDegree: 90
 --- !u!1 &1372713381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62e359434d05435694878f9841197a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bike: {fileID: 1372713381}
 --- !u!4 &1491523657
 Transform:
   m_ObjectHideFlags: 0

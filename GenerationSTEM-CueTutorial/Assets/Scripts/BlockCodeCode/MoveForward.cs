@@ -5,9 +5,8 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     public GameObject bike;
-    float default_movement;
+    float defaultMovement;
     //do these temporary values for now (until you can get user input)
-    //will have to get user input for these two values
 
     //want to be able to  move back and (positive and negative values)
     public float distance;
@@ -15,23 +14,24 @@ public class MoveForward : MonoBehaviour
     //want to be able to slow down and move faster (WITHIN THE DISTANCE GIVEN!)
     //try timescale? is slows down the time of the movement
     public float speed;
-   
 
-    // Start is called before the first frame update
+    /* only use this start for testing otherwise dont need it since code
+     * will play whe "Play" button is clicked */
     void Start()
     {
         //make sure to have dafault values
         //distance = 10f;
         //speed = 1.0f;
-
-        //want this to it moved in a constant movemnent
-        default_movement = Time.deltaTime * 10;
+  
         Move();
     }
 
     //need to add a speed to it
     public void Move()
     {
+        //want this to it moved in a constant movemnent
+        defaultMovement = Time.deltaTime * 10;
+
         //if statement 
         //set boundaries
         /* do this by creating a clear object
@@ -42,11 +42,11 @@ public class MoveForward : MonoBehaviour
          * can use Range? (doesnt seem like the best approach)
          */
 
-            //original try but no good
-            //bike.transform.position = new Vector3(bike.transform.position.x + (distance * default_movement) * speed, bike.transform.position.y);
+        //original try but no good
+        //bike.transform.position = new Vector3(bike.transform.position.x + (distance * default_movement) * speed, bike.transform.position.y);
 
-            //this below ones works well but  doesnt inlcude speed
-            bike.transform.Translate((distance * default_movement), 0, 0);
+        //this below ones works well but  doesnt inlcude speed
+        bike.transform.Translate((distance * defaultMovement), 0, 0);
 
             //this speed adds further movment if added but does it wrong with multipy
             //bike.transform.Translate((distance * default_movement) * (speed * Time.deltaTime), 0, 0);
