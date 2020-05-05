@@ -23,6 +23,13 @@ public class PlayStopButtonAction : MonoBehaviour
 
     public void StopBlockCode()
     {
+        /*
+         * it may be possible that if it doesnt reset properly to create a
+         * new instance of the game object (this could be easier too)
+         * For example:
+         * GameObject obj = Instantiate(prefab, new Vector3(-1.5f, transform.position.y, transform.position.z), Quaternion.identity) as GameObject;
+         */
+
         //will run the block code for the stop button
         Debug.Log("Stop Button Clicked");
 
@@ -30,6 +37,7 @@ public class PlayStopButtonAction : MonoBehaviour
         bike.transform.position = originalPosition;
         //bike.transform.rotation = originalRotation;
 
+        //as of 5/04 rotation is not reseting 
         transform.rotation = Quaternion.Slerp(bike.transform.rotation, originalRotation, Time.time * rotationResetSpeed);
 
         /*if (rigidbody != null)
