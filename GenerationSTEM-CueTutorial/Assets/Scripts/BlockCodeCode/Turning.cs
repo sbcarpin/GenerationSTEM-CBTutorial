@@ -5,9 +5,7 @@ using UnityEngine;
 public class Turning : MonoBehaviour
 {
     /*
-     * how will you make it look when it is turned 180 degrees?
-     * should we mirror it?
-     * maybe an if statement for any 180 to mirror the image?
+     * 
      */
 
     public GameObject bike;
@@ -24,7 +22,14 @@ public class Turning : MonoBehaviour
 
     void Turn()
     {
-        bike.transform.Rotate(0, 0, rotationDegree);
-
+        //if the rotation input is grater than 180 than have to flip the y axis
+        if(rotationDegree >= 180f)
+        {
+            bike.transform.Rotate(0, -rotationDegree, 0);
+        }
+        else
+        {
+            bike.transform.Rotate(0, 0, rotationDegree);
+        }
     }
 }

@@ -2522,7 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bike: {fileID: 1372713381}
-  rotationDegree: 90
+  rotationDegree: 180
 --- !u!1 &1372713381
 GameObject:
   m_ObjectHideFlags: 0
