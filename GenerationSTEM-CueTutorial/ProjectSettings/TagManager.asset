@@ -8,6 +8,7 @@ TagManager:
   - ActionsSection
   - BlockCode
   - Bicycle
+  - Border
   layers:
   - Default
   - TransparentFX
