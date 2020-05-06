@@ -16,12 +16,13 @@ public class MoveForward : MonoBehaviour
     public float speed;
 
     /* only use this start for testing otherwise dont need it since code
-     * will play whe "Play" button is clicked */
+     * will play when "Play" button is clicked */
     void Start()
     {
-        //make sure to have dafault values
+        //make sure to have default values
         //distance = 10f;
         //speed = 1.0f;
+        // ELLA EXISTIO SOLO EN UN SUENO ERES UN POEMA QUE UN POETA NO ESCRIBIO
   
         Move();
     }
@@ -34,12 +35,10 @@ public class MoveForward : MonoBehaviour
 
         //if statement 
         //set boundaries
-        /* do this by creating a clear object
-         * put 4 clear line objects around the bike area
-         * have them all have box 2d colliders
-         * whenever the bike hits the claer line then have it bounce or something
-         * so the user knows not to go over the boundaries
-         * can use Range? (doesnt seem like the best approach)
+        /*
+         * addded the collliders to the border and bikes but now need to make it block
+         * any further movement and maybe bounce?
+         * 
          */
 
         //original try but no good
