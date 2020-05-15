@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayStopButtonAction : MonoBehaviour
 {
@@ -8,17 +9,28 @@ public class PlayStopButtonAction : MonoBehaviour
     private Quaternion originalRotation;
     public GameObject bike;
     float rotationResetSpeed = 1.0f;
+    public Button button;
 
     void Start()
     {
         originalPosition = bike.transform.position;
         originalRotation = bike.transform.rotation;
+        
     }
 
     public void PlayBlockCode()
     {
+        var instance = new MoveForward();
         //will run the block code for the play button
         Debug.Log("Play Button Clicked");
+
+        //play button works with incuding the code in the "on click" on the play button object
+        button.GetComponent<Button>().onClick.AddListener(delegate { instance.Move(bike); });
+
+        //what this does is add the code to the bike object but
+        //you want to add the bike to the code as a game object
+        //you still need it since theres an error in the code??
+        //instance = bike.AddComponent<MoveForward>();
     }
 
     public void StopBlockCode()

@@ -18,9 +18,10 @@ public class UserInput : MonoBehaviour
     public void GetData()
     {
         Debug.Log(input_field.text);
+
         //currently have an error that it cant get the text value (doesn't work with getcompenet)
-        //value = inputField.GetComponent<Text>().text; //for float
-        //Debug.Log(value);
+        value = input_field.GetComponent<Text>().text; //for float
+        Debug.Log(value);
 
         //remember to parse it to get a int/float value instead of a string
     }

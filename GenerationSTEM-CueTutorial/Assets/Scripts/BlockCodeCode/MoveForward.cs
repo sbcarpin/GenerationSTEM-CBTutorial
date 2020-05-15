@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     public GameObject bike;
-    float defaultMovement;
+    public float defaultMovement;
     //do these temporary values for now (until you can get user input)
 
     //want to be able to  move back and (positive and negative values)
@@ -21,14 +21,13 @@ public class MoveForward : MonoBehaviour
     {
         //make sure to have default values
         //distance = 10f;
-        //speed = 1.0f;
-        // ELLA EXISTIO SOLO EN UN SUENO ERES UN POEMA QUE UN POETA NO ESCRIBIO
+        //speed = 1.0f
   
-        Move();
+        Move(bike);
     }
 
     //need to add a speed to it
-    public void Move()
+    public void Move(GameObject bike)
     {
         //want this to it moved in a constant movemnent
         defaultMovement = Time.deltaTime * 10;
