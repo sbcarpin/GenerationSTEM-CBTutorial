@@ -20,7 +20,7 @@ public class move15 : MonoBehaviour
         Move(bike);
     }
 
-    //this will make the bike move of a distance of 10
+    //this will make the bike move of a distance of 15
     public void Move(GameObject bike)
     {
         defaultMovement = Time.deltaTime * extra_travel;

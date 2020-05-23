@@ -300,6 +300,7 @@
 "Assets/Scripts/BlockCodeCode/move5.cs"
 "Assets/Scripts/BlockCodeCode/MoveForward.cs"
 "Assets/Scripts/BlockCodeCode/RepeatCode.cs"
+"Assets/Scripts/BlockCodeCode/turn90.cs"
 "Assets/Scripts/BlockCodeCode/Turning.cs"
 "Assets/Scripts/BlockCodeCode/Waiting.cs"
 "Assets/Scripts/Borders.cs"
